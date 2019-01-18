@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="mingkongzheng-Blog">
 <meta property="og:description" content="深度学习中的End to EndEnd to End就是端到端，一端输入原始数据，一段输出结果，中间步骤无关。 特征提取主要是端到端的方式进行。而不需要干预深度学习中的特征选取和生成。 cnn就是比较典型的end2end模型。在图像分类里输入image各通道像素，输出图像类别。 相比于非end2end，conv层的卷积核可以充当feature extractor部分而不需要额外的工作去做特征工程的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/深度学习问题一/6273-14751-image015.png">
-<meta property="og:image" content="http://yoursite.com/深度学习问题一/SouthEast">
-<meta property="og:updated_time" content="2019-01-18T09:21:47.448Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/18/深度学习问题一/6273-14751-image015.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/18/深度学习问题一/SouthEast.png">
+<meta property="og:updated_time" content="2019-01-18T09:25:44.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习问题一">
 <meta name="twitter:description" content="深度学习中的End to EndEnd to End就是端到端，一端输入原始数据，一段输出结果，中间步骤无关。 特征提取主要是端到端的方式进行。而不需要干预深度学习中的特征选取和生成。 cnn就是比较典型的end2end模型。在图像分类里输入image各通道像素，输出图像类别。 相比于非end2end，conv层的卷积核可以充当feature extractor部分而不需要额外的工作去做特征工程的">
-<meta name="twitter:image" content="http://yoursite.com/深度学习问题一/6273-14751-image015.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/18/深度学习问题一/6273-14751-image015.png">
 
 
 
@@ -385,7 +385,7 @@
 <p>例子：</p>
 <p>例如，对于64X128的图像而言，每16X16的像素组成一个cell，每2X2个cell组成一个块，因为每个cell有9个特征，所以每个块内有4X9=36个特征，以8个像素为步长，那么，水平方向将有7个扫描窗口，垂直方向将有15个扫描窗口。也就是说，64X128的图片，总共有36X7X15=3780个特征。</p>
 <p>效果图：</p>
-<p><img src="/深度学习问题一/6273-14751-image015.png" alt="image"></p>
+<p><img src="/2019/01/18/深度学习问题一/6273-14751-image015.png" alt="image"></p>
 <h4 id="SIFT"><a href="#SIFT" class="headerlink" title="SIFT"></a>SIFT</h4><p><strong>SIFT特征提取的实质</strong></p>
 <p>在不同的尺度空间上查找<strong>关键点</strong>(特征点)，并计算出关键点的<strong>方向</strong>。SIFT所查找到的关键点是一些十分突出、不会因光照、仿射变换和噪音等因素而变化的点，如角点、边缘点、暗区的亮点及亮区的暗点等。</p>
 <p><strong>寻找关键点，并且计算出关键点的方向</strong></p>
@@ -394,7 +394,7 @@
 <p>LBP特征描述的是一种灰度范围内的图像处理操作技术。</p>
 <p>LBP特征将窗口中心点与邻域点的关系进行比较，重新编码形成新特征以消除对外界场景对图像的影响，因此一定程度上解决了复杂场景下（<strong>光照变换</strong>）特征描述问题。</p>
 <p>经典LBP的算子窗口为3×3的正方形窗口，以窗口中心像素为阈值，将其相邻8领域像素灰度与中心像素值比较，若中心像素值小于周围像素值，则该中心像素位置被标记为1，否则为0（显然这种规则下，对于中心点大于或等于这两种情况，算法无法区分，后续经过改进引入LBP+与LBP-因子用来区分这两种情况）。图像经过这种遍历操作后，图像就被二值化。</p>
-<p><img src="/深度学习问题一/SouthEast" alt="image"></p>
+<p><img src="/2019/01/18/深度学习问题一/SouthEast.png" alt="image"></p>
 
       
     </div>
