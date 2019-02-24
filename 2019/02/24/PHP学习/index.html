@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="learn,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="PHP学习php echo &amp;amp;&amp;amp; print： 123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;?phpecho &amp;quot;&amp;lt;h1&amp;gt;PHP learn&amp;lt;/h1&amp;gt;&amp;quot;?&amp;gt;-------------------------&amp;lt;?php">
+<meta name="keywords" content="learn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP学习">
+<meta property="og:url" content="http://yoursite.com/2019/02/24/PHP学习/index.html">
+<meta property="og:site_name" content="mingkongzheng-Blog">
+<meta property="og:description" content="PHP学习php echo &amp;amp;&amp;amp; print： 123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;?phpecho &amp;quot;&amp;lt;h1&amp;gt;PHP learn&amp;lt;/h1&amp;gt;&amp;quot;?&amp;gt;-------------------------&amp;lt;?php">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-24T14:58:15.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP学习">
+<meta name="twitter:description" content="PHP学习php echo &amp;amp;&amp;amp; print： 123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;?phpecho &amp;quot;&amp;lt;h1&amp;gt;PHP learn&amp;lt;/h1&amp;gt;&amp;quot;?&amp;gt;-------------------------&amp;lt;?php">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/24/PHP学习/">
+
+
+
+
+
+  <title>PHP学习 | mingkongzheng-Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">mingkongzheng-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">さんのブログ</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/PHP学习/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mingkongzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mypic.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mingkongzheng-Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T22:52:32+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="PHP学习"><a href="#PHP学习" class="headerlink" title="PHP学习"></a>PHP学习</h3><p>php echo &amp;&amp; print：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;&lt;h1&gt;PHP learn&lt;/h1&gt;&quot;</span><br><span class="line">?&gt;</span><br><span class="line">-------------------------</span><br><span class="line">&lt;?php</span><br><span class="line">print &quot;hello world&quot;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$txt=&quot;learn to machine&quot;</span><br><span class="line">$car=array(&quot;volo&quot;,&quot;bmw&quot;,&quot;toyota&quot;)</span><br><span class="line">print &quot;我的车品牌&quot;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">EOF的使用，连续使用变量</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$name=&quot;变量会被解析&quot;;</span><br><span class="line">$a=&lt;&lt;&lt;EOF</span><br><span class="line">$name&lt;br&gt;&lt;a&gt;html格式会被解析&lt;/a&gt;&lt;br/&gt;双引号和Html格式外的其他内容都不会被解析</span><br><span class="line">&quot;双引号外所有被排列好的格式都会被保留&quot;</span><br><span class="line">&quot;但是双引号内会保留转义符的转义效果,比如table:\t和换行：\n下一行&quot;</span><br><span class="line">EOF;</span><br><span class="line">echo $a;</span><br><span class="line">?&gt; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">定义命名空间：</span><br><span class="line">&lt;?php</span><br><span class="line">namespace MyProject &#123;</span><br><span class="line">    const CONNECT_OK = 1;</span><br><span class="line">    class Connection &#123; /* ... */ &#125;</span><br><span class="line">    function connect() &#123; /* ... */  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">namespace AnotherProject &#123;</span><br><span class="line">    const CONNECT_OK = 1;</span><br><span class="line">    class Connection &#123; /* ... */ &#125;</span><br><span class="line">    function connect() &#123; /* ... */  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="子命名空间"><a href="#子命名空间" class="headerlink" title="子命名空间"></a>子命名空间</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Foo</span>\<span class="title">Bar</span>\<span class="title">subnamespace</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> FOO = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">foo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">staticmethod</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace Foo\Bar;</span><br><span class="line">include &apos;file1.php&apos;;</span><br><span class="line"></span><br><span class="line">const FOO = 2;</span><br><span class="line">function foo() &#123;&#125;</span><br><span class="line">class foo</span><br><span class="line">&#123;</span><br><span class="line">    static function staticmethod() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 非限定名称 */</span><br><span class="line">foo(); // 解析为函数 Foo\Bar\foo</span><br><span class="line">foo::staticmethod(); // 解析为类 Foo\Bar\foo ，方法为 staticmethod</span><br><span class="line">echo FOO; // 解析为常量 Foo\Bar\FOO</span><br><span class="line"></span><br><span class="line">/* 限定名称 */</span><br><span class="line">subnamespace\foo(); // 解析为函数 Foo\Bar\subnamespace\foo</span><br><span class="line">subnamespace\foo::staticmethod(); // 解析为类 Foo\Bar\subnamespace\foo,</span><br><span class="line">                                  // 以及类的方法 staticmethod</span><br><span class="line">echo subnamespace\FOO; // 解析为常量 Foo\Bar\subnamespace\FOO</span><br><span class="line">                                  </span><br><span class="line">/* 完全限定名称 */</span><br><span class="line">\Foo\Bar\foo(); // 解析为函数 Foo\Bar\foo</span><br><span class="line">\Foo\Bar\foo::staticmethod(); // 解析为类 Foo\Bar\foo, 以及类的方法 staticmethod</span><br><span class="line">echo \Foo\Bar\FOO; // 解析为常量 Foo\Bar\FOO</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>PHP的实例操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class Site &#123;</span><br><span class="line">  /* 成员变量 */</span><br><span class="line">  var $url;</span><br><span class="line">  var $title;</span><br><span class="line">  </span><br><span class="line">  /* 成员函数 */</span><br><span class="line">  function setUrl($par)&#123;</span><br><span class="line">     $this-&gt;url = $par;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  function getUrl()&#123;</span><br><span class="line">     echo $this-&gt;url . PHP_EOL;//PHP_EOL 为换行符。</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  function setTitle($par)&#123;</span><br><span class="line">     $this-&gt;title = $par;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  function getTitle()&#123;</span><br><span class="line">     echo $this-&gt;title . PHP_EOL;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">$runoob-&gt;setTitle( &quot;菜鸟教程&quot; );</span><br><span class="line">$runoob-&gt;setUrl( &apos;www.runoob.com&apos; );</span><br><span class="line">$runoob-&gt;getTitle();</span><br><span class="line">$runoob-&gt;getUrl();</span><br></pre></td></tr></table></figure>
+<h2 id="PHP-构造函数"><a href="#PHP-构造函数" class="headerlink" title="PHP 构造函数"></a>PHP 构造函数</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void __construct ([ mixed $args [, $... ]] )</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">( $par1, $par2 )</span> </span>&#123;</span><br><span class="line">   <span class="keyword">$this</span>-&gt;url = $par1;</span><br><span class="line">   <span class="keyword">$this</span>-&gt;title = $par2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyDestructableClass</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">print</span> <span class="string">"构造函数\n"</span>;</span><br><span class="line">       <span class="keyword">$this</span>-&gt;name = <span class="string">"MyDestructableClass"</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">print</span> <span class="string">"销毁 "</span> . <span class="keyword">$this</span>-&gt;name . <span class="string">"\n"</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$obj = <span class="keyword">new</span> MyDestructableClass();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>php支持继承</p>
+<h1 id="PHP-多维数组"><a href="#PHP-多维数组" class="headerlink" title="PHP 多维数组"></a>PHP 多维数组</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 二维数组:</span></span><br><span class="line">$cars = <span class="keyword">array</span></span><br><span class="line">(</span><br><span class="line">    <span class="keyword">array</span>(<span class="string">"Volvo"</span>,<span class="number">100</span>,<span class="number">96</span>),</span><br><span class="line">    <span class="keyword">array</span>(<span class="string">"BMW"</span>,<span class="number">60</span>,<span class="number">59</span>),</span><br><span class="line">    <span class="keyword">array</span>(<span class="string">"Toyota"</span>,<span class="number">110</span>,<span class="number">100</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span>(cars[<span class="number">0</span>][<span class="number">0</span>])<span class="comment">//结果是Volvo</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">=================================</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$q = <span class="keyword">isset</span>($_POST[<span class="string">'q'</span>])? $_POST[<span class="string">'q'</span>] : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(is_array($q)) &#123;</span><br><span class="line">    $sites = <span class="keyword">array</span>(</span><br><span class="line">            <span class="string">'RUNOOB'</span> =&gt; <span class="string">'菜鸟教程: http://www.runoob.com'</span>,</span><br><span class="line">            <span class="string">'GOOGLE'</span> =&gt; <span class="string">'Google 搜索: http://www.google.com'</span>,</span><br><span class="line">            <span class="string">'TAOBAO'</span> =&gt; <span class="string">'淘宝: http://www.taobao.com'</span>,</span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">foreach</span>($q <span class="keyword">as</span> $val) &#123;</span><br><span class="line">        <span class="comment">// PHP_EOL 为常量，用于换行</span></span><br><span class="line">        <span class="keyword">echo</span> $sites[$val] . PHP_EOL;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">&lt;form action=<span class="string">""</span> method=<span class="string">"post"</span>&gt; </span><br><span class="line">    &lt;select multiple=<span class="string">"multiple"</span> name=<span class="string">"q[]"</span>&gt;</span><br><span class="line">    &lt;option value=<span class="string">""</span>&gt;选择一个站点:&lt;/option&gt;</span><br><span class="line">    &lt;option value=<span class="string">"RUNOOB"</span>&gt;Runoob&lt;/option&gt;</span><br><span class="line">    &lt;option value=<span class="string">"GOOGLE"</span>&gt;Google&lt;/option&gt;</span><br><span class="line">    &lt;option value=<span class="string">"TAOBAO"</span>&gt;Taobao&lt;/option&gt;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="GET、-POST-和-REQUEST-的区别？"><a href="#GET、-POST-和-REQUEST-的区别？" class="headerlink" title="$_GET、$_POST 和 $_REQUEST 的区别？"></a><strong>$_GET、$_POST 和 $_REQUEST 的区别？</strong></h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$q = <span class="keyword">isset</span>($_GET[<span class="string">'q'</span>])? htmlspecialchars($_GET[<span class="string">'q'</span>]) : <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$q = <span class="keyword">isset</span>($_POST[<span class="string">'q'</span>])? $_POST[<span class="string">'q'</span>] : <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$q = <span class="keyword">isset</span>($_GET[<span class="string">'q'</span>])? htmlspecialchars($_GET[<span class="string">'q'</span>]) : <span class="string">''</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="文字字段"><a href="#文字字段" class="headerlink" title="文字字段"></a>文字字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">“名字”: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span><br><span class="line">E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;</span><br><span class="line">网址: &lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;</span><br><span class="line">备注: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="单选按钮"><a href="#单选按钮" class="headerlink" title="单选按钮"></a>单选按钮</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">性别:</span><br><span class="line">&lt;input type=<span class="string">"radio"</span> name=<span class="string">"gender"</span> value=<span class="string">"female"</span>&gt;女</span><br><span class="line">&lt;input type=<span class="string">"radio"</span> name=<span class="string">"gender"</span> value=<span class="string">"male"</span>&gt;男</span><br></pre></td></tr></table></figure>
+<h4 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"&lt;?php echo htmlspecialchars($_SERVER["</span>PHP_SELF<span class="string">"]);?&gt;"</span>&gt;</span><br><span class="line"></span><br><span class="line">    该表单使用 method=<span class="string">"post"</span> 方法来提交数据。</span><br><span class="line">    </span><br><span class="line">    什么是 htmlspecialchars()方法?</span><br><span class="line"></span><br><span class="line">    htmlspecialchars() 函数把一些预定义的字符转换为 HTML 实体。</span><br></pre></td></tr></table></figure>
+<p><strong>什么是 $_SERVER[“PHP_SELF”] 变量?</strong></p>
+<p>$_SERVER[“PHP_SELF”]是超级全局变量，返回当前正在执行脚本的文件名，与 document root相关。 $_SERVER[“PHP_SELF”] 会发送表单数据到当前页面，而不是跳转到不同的页面。</p>
+<h2 id="PHP表单中需引起注重的地方？"><a href="#PHP表单中需引起注重的地方？" class="headerlink" title="PHP表单中需引起注重的地方？"></a>PHP表单中需引起注重的地方？</h2><p>$_SERVER[“PHP_SELF”] 变量有可能会被黑客使用！</p>
+<p>当黑客使用跨网站脚本的HTTP链接来攻击时，$_SERVER[“PHP_SELF”]服务器变量也会被植入脚本。原因就是跨网站脚本是附在执行文件的路径后面的，因此$_SERVER[“PHP_SELF”]的字符串就会包含HTTP链接后面的JavaScript程序代码。</p>
+<p>指定以下表单文件名为 “test_form.php”:</p>
+<p><strong>&lt;form method=”post” action=”&lt;?php echo $_SERVER[“PHP_SELF”];?&gt;”&gt;</strong></p>
+<p>URL来指定提交地址 “test_form.php”,以上代码修改为如下所示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=&quot;post&quot; action=&quot;test_form.php&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="使用-PHP-验证表单数据"><a href="#使用-PHP-验证表单数据" class="headerlink" title="使用 PHP 验证表单数据"></a>使用 PHP 验证表单数据</h3><p>首先我们对用户所有提交的数据都通过 PHP 的 htmlspecialchars() 函数处理。</p>
+<p>当我们使用 htmlspecialchars() 函数时，在用户尝试提交以下文本域:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;location.href(<span class="string">'http://www.runoob.com'</span>)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;script&amp;gt;location.href(<span class="string">'http://www.runoob.com'</span>)&amp;lt;/script&amp;gt;</span><br></pre></td></tr></table></figure>
+<p><strong>表单的验证实例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 定义变量并默认设置为空值</span><br><span class="line">$name = $email = $gender = $comment = $website = &quot;&quot;;</span><br><span class="line"> </span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;)</span><br><span class="line">&#123;</span><br><span class="line">  $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">  $email = test_input($_POST[&quot;email&quot;]);</span><br><span class="line">  $website = test_input($_POST[&quot;website&quot;]);</span><br><span class="line">  $comment = test_input($_POST[&quot;comment&quot;]);</span><br><span class="line">  $gender = test_input($_POST[&quot;gender&quot;]);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">function test_input($data)</span><br><span class="line">&#123;</span><br><span class="line">  $data = trim($data);</span><br><span class="line">  $data = stripslashes($data);</span><br><span class="line">  $data = htmlspecialchars($data);</span><br><span class="line">  return $data;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">1.PHP trim() 函数去除用户输入数据中不必要的字符 (如：空格，tab，换行)。</span><br><span class="line">2.使用PHP stripslashes()函数去除用户输入数据中的反斜杠 (\)</span><br></pre></td></tr></table></figure>
+<h4 id="PHP-表单-必需字段"><a href="#PHP-表单-必需字段" class="headerlink" title="PHP 表单 - 必需字段"></a>PHP 表单 - 必需字段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$nameErr = $emailErr = $genderErr = $websiteErr = &quot;&quot;;</span><br><span class="line">$name = $email = $gender = $comment = $website = &quot;&quot;;</span><br><span class="line"></span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) &#123;</span><br><span class="line">  if (empty($_POST[&quot;name&quot;])) &#123;</span><br><span class="line">    $nameErr = &quot;名字是必需的。&quot;;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="PHP-显示错误信息"><a href="#PHP-显示错误信息" class="headerlink" title="PHP - 显示错误信息"></a>PHP - 显示错误信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&apos;PHP_SELF&apos;]);?&gt;&quot;&gt; </span><br><span class="line">   </span><br><span class="line">   名字: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;* &lt;?php echo $nameErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;br&gt;&lt;br&gt;</span><br><span class="line">    </span><br><span class="line">   E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;* &lt;?php echo $emailErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;br&gt;&lt;br&gt;</span><br><span class="line">   </span><br><span class="line">   网址: &lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;&lt;?php echo $websiteErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;br&gt;&lt;br&gt;</span><br><span class="line">   </span><br><span class="line">   备注: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">   &lt;br&gt;&lt;br&gt;</span><br><span class="line">    </span><br><span class="line">   性别:</span><br><span class="line">   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;女</span><br><span class="line">   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;男</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;* &lt;?php echo $genderErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;br&gt;&lt;br&gt;</span><br><span class="line">   &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="PHP-GET变量"><a href="#PHP-GET变量" class="headerlink" title="PHP $_GET变量"></a>PHP $_GET变量</h3><p>在 PHP 中，预定义的 $_GET 变量用于收集来自 method=”get” 的表单中的值。</p>
+<p>从带有 GET 方法的表单发送的信息，对任何人都是可见的（会显示在浏览器的地址栏），并且对发送信息的量也有限制。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">    </span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action=&quot;welcome.php&quot; method=&quot;get&quot;&gt;</span><br><span class="line">名字: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;</span><br><span class="line">年龄: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>“welcome.php” 文件现在可以通过 $_GET 变量来收集表单数据了（请注意，表单域的名称会自动成为 $_GET 数组中的键）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎 &lt;?php echo $_GET[&quot;fname&quot;]; ?&gt;!&lt;br&gt;</span><br><span class="line">你的年龄是 &lt;?php echo $_GET[&quot;age&quot;]; ?&gt;  岁。</span><br></pre></td></tr></table></figure>
+<h2 id="何时使用-method-”get”？"><a href="#何时使用-method-”get”？" class="headerlink" title="何时使用 method=”get”？"></a>何时使用 method=”get”？</h2><p>在 HTML 表单中使用 method=”get” 时，所有的变量名和值都会显示在 URL 中。</p>
+<p><strong>注释：</strong>所以在发送密码或其他敏感信息时，不应该使用这个方法！</p>
+<h3 id="php-post"><a href="#php-post" class="headerlink" title="php $_post"></a>php $_post</h3><p>PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。</p>
+<p>从带有 POST 方法的表单发送的信息，对任何人都是不可见的（不会显示在浏览器的地址栏），并且对发送信息的量也没有限制。</p>
+<p><strong>注释：</strong>然而，默认情况下，POST 方法的发送信息的量最大值为 8 MB（可通过设置 php.ini 文件中的 post_max_size 进行更改）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;</span><br><span class="line">名字: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;</span><br><span class="line">年龄: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>“welcome.php” 文件现在可以通过 $_POST 变量来收集表单数据了（请注意，表单域的名称会自动成为 $_POST 数组中的键）：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎 <span class="meta">&lt;?php</span> <span class="keyword">echo</span> $_POST[<span class="string">"fname"</span>]; <span class="meta">?&gt;</span>!&lt;br&gt;</span><br><span class="line">你的年龄是 <span class="meta">&lt;?php</span> <span class="keyword">echo</span> $_POST[<span class="string">"age"</span>]; <span class="meta">?&gt;</span>  岁。</span><br></pre></td></tr></table></figure>
+<h2 id="PHP-REQUEST-变量"><a href="#PHP-REQUEST-变量" class="headerlink" title="PHP $_REQUEST 变量"></a>PHP $_REQUEST 变量</h2><p>预定义的 $_REQUEST 变量包含了 $_GET、$_POST 和 $_COOKIE 的内容。</p>
+<p>$_REQUEST 变量可用来收集通过 GET 和 POST 方法发送的表单数据。</p>
+
+      
+    </div>
+    
+    
+    
+    
+  <div>
+
+  <div>
+
+	<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+  </div>
+  
+<div>
+      
+        
+
+      
+</div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="mingkongzheng 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/learn/" rel="tag"># learn</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/第一次作业内容相关/" rel="next" title="第一次作业内容相关">
+                <i class="fa fa-chevron-left"></i> 第一次作业内容相关
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/mypic.jpg" alt="mingkongzheng">
+            
+              <p class="site-author-name" itemprop="name">mingkongzheng</p>
+              <p class="site-description motion-element" itemprop="description">To store some essaies and ideals</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZMK112" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mingkongzheng@gamil.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP学习"><span class="nav-number">1.</span> <span class="nav-text">PHP学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子命名空间"><span class="nav-number">1.1.</span> <span class="nav-text">子命名空间</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-构造函数"><span class="nav-number"></span> <span class="nav-text">PHP 构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#析构函数"><span class="nav-number">0.1.</span> <span class="nav-text">析构函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP-多维数组"><span class="nav-number"></span> <span class="nav-text">PHP 多维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET、-POST-和-REQUEST-的区别？"><span class="nav-number">0.1.</span> <span class="nav-text">$_GET、$_POST 和 $_REQUEST 的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文字字段"><span class="nav-number">0.2.</span> <span class="nav-text">文字字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单选按钮"><span class="nav-number">0.3.</span> <span class="nav-text">单选按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单元素"><span class="nav-number">0.4.</span> <span class="nav-text">表单元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP表单中需引起注重的地方？"><span class="nav-number"></span> <span class="nav-text">PHP表单中需引起注重的地方？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-PHP-验证表单数据"><span class="nav-number">1.</span> <span class="nav-text">使用 PHP 验证表单数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP-表单-必需字段"><span class="nav-number">1.1.</span> <span class="nav-text">PHP 表单 - 必需字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP-显示错误信息"><span class="nav-number">1.2.</span> <span class="nav-text">PHP - 显示错误信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP-GET变量"><span class="nav-number">2.</span> <span class="nav-text">PHP $_GET变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#何时使用-method-”get”？"><span class="nav-number"></span> <span class="nav-text">何时使用 method=”get”？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#php-post"><span class="nav-number">1.</span> <span class="nav-text">php $_post</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-REQUEST-变量"><span class="nav-number"></span> <span class="nav-text">PHP $_REQUEST 变量</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mingkongzheng</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
